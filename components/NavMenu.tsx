@@ -36,7 +36,18 @@ function NavMenu(props: NavMenuProps) {
   //
   // By default, we are just piping all NavMenuProps here, but feel free
   // to do whatever works for you.
-  return <PlasmicNavMenu {...props} />;
+
+  return (
+    <PlasmicNavMenu
+      {...props}
+      root={{
+        style: { position: "static" },
+      }}
+      menuContainer={{
+        style: { position: "static" },
+      }}
+    />
+  );
 }
 
 export default NavMenu;
